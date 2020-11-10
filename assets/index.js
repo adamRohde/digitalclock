@@ -1,36 +1,20 @@
 
-var myCyclicTask;
-var currenttime = new Date();
+window.setInterval(function(){
+    var tDate = new Date()
 
+    console.log(tDate.getDay(), tDate.getHours(), tDate.getMinutes(), tDate.getSeconds())
 
-function runTask() {
+    if (tDate.getHours() > 12){
+        document.getElementById("hour").innerHTML = tDate.getHours() - 12;
+    }else{
+        document.getElementById("hour").innerHTML = tDate.getHours();
+    }
 
-    console.log("task 1");
+    document.getElementById("minute").innerHTML = tDate.getMinutes();
 
-    updateTime();
+    document.getElementById("second").innerHTML = tDate.getSeconds();
 
-    myCyclicTask = setTimeout(runTask, 1000);
-
-}
-
-function updateTime(t) {
-
-   
-    console.log(currenttime.getHours() + ":" + currenttime.getMinutes() + ":" + currenttime.getSeconds());
-
-    document.getElementById("hour").innerHTML = currenttime.getHours();
-
-    document.getElementById("minute").innerHTML = currenttime.getMinutes();
-
-    document.getElementById("second").innerHTML = currenttime.getSeconds();
-
-}
-
-
-runTask();
-
-
-
+}, 1000);
 
 
 
