@@ -1,0 +1,19 @@
+
+.wrapper {
+    display:grid;
+    grid-template-columns: 24fr 1fr 24fr 1fr 24fr;
+    grid-gap : .2em;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper > div:nth-child(odd){
+
+    background: #ddd;
+
+}
+
+.wrapper > div{
+
+    background: #eee;
+    text-align: center;
+}
