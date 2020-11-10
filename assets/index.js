@@ -3,33 +3,50 @@
 window.setInterval(function(){
     let tDate = new Date()
 
+//------------------------------------------------------------------Day of week----------------------------------------------------
     //Displays the day of the week
     document.getElementById("dayoftheweek").innerHTML = dayoftheweek[tDate.getDay()];
 
-    //Displays the current time in 12 hour time
-    if (tDate.getHours() > 12){
-        var temphours = tDate.getHours() - 12;
 
+//------------------------------------------------------------------Time----------------------------------------------------
+    //Displays the current time in 12 hour time if radio is checked
+    if (document.getElementById('12-hour-clock').checked) {
+        console.log("12 hour checked");
+        if (tDate.getHours() > 12){
+            var temphours = tDate.getHours() - 12;
+            if (temphours < 10){
+                document.getElementById("hour").innerHTML = "0" + (tDate.getHours() - 12);
+            }else{
+                document.getElementById("hour").innerHTML = tDate.getHours() - 12;
+            }
+        }else{       
+            if (temphours < 10){
+                document.getElementById("hour").innerHTML = "0" + (tDate.getHours() - 12);
+            }else{
+                document.getElementById("hour").innerHTML = tDate.getHours() - 12;
+            }
+        } 
+    //Displays the current time in 24 hour time if radio is checked  
+    }else if (document.getElementById('24-hour-clock').checked){
+        console.log("24 hour checked");
         if (temphours < 10){
-            document.getElementById("hour").innerHTML = "0" + (tDate.getHours() - 12);
+            document.getElementById("hour").innerHTML = "0" + tDate.getHours();
         }else{
-            document.getElementById("hour").innerHTML = tDate.getHours() - 12;
-        }
-    }else{       
-        if (temphours < 10){
-            document.getElementById("hour").innerHTML = "0" + (tDate.getHours() - 12);
-        }else{
-            document.getElementById("hour").innerHTML = tDate.getHours() - 12;
+            document.getElementById("hour").innerHTML = tDate.getHours();
         }
     }
-
+//---------------------------------------------------------Date----------------------------------------------------------------
     if (tDate.getMinutes() < 10){
         document.getElementById("minute").innerHTML = "0" + tDate.getMinutes();
     }else{
         document.getElementById("minute").innerHTML = tDate.getMinutes();
     }
 
-    document.getElementById("second").innerHTML = tDate.getSeconds();
+    if (tDate.getSeconds() < 10){
+        document.getElementById("second").innerHTML = "0" + tDate.getSeconds();
+    }else{
+        document.getElementById("second").innerHTML = tDate.getSeconds();
+    }
 
     //Displays the month
     document.getElementById("month").innerHTML = month[tDate.getMonth()];
@@ -45,25 +62,8 @@ window.setInterval(function(){
     console.log(dayoftheweek[tDate.getDay()]);
     console.log(month[tDate.getMonth()]); 
 
+
 }, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
