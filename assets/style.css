@@ -1,19 +1,71 @@
 
-.wrapper {
+.dayoftheweek{
     display:grid;
-    grid-template-columns: 24fr 1fr 24fr 1fr 24fr;
-    grid-gap : .2em;
+    grid-template-columns: repeat(1, 24fr);
+    padding: 0.2em 0em 0.2em 0em;
+    grid-gap : 0em;
     grid-auto-rows: minmax(100px, auto);
 }
 
-.wrapper > div:nth-child(odd){
-
-    background: #ddd;
-
-}
-
-.wrapper > div{
+.dayoftheweek > div{
 
     background: #eee;
     text-align: center;
 }
+
+.dayoftheweek > div > h1{
+
+    /* using px?  Is there a better way to define font size */
+    font-size: 72px;
+
+}
+
+
+.clock {
+    display:grid;
+    grid-template-columns: 24fr 1fr 24fr 1fr 24fr;
+    grid-gap : 0em;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/* .clock > div:nth-child(odd){
+
+    background: #ddd;
+
+} */
+
+.clock > div{
+
+    background: #eee;
+    text-align: center;
+}
+
+.clock > div > h1{
+
+    /* using px?  Is there a better way to define font size */
+    font-size: 72px;
+
+}
+
+
+.monthdayyear{
+    display:grid;
+    grid-template-columns: repeat(3, 24fr);
+    padding: 0.2em 0em 0.2em 0em;
+    grid-gap : 0em;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.monthdayyear > div{
+
+    background: #eee;
+    text-align: center;
+}
+
+.monthdayyear > div > h1{
+
+    /* using px?  Is there a better way to define font size */
+    font-size: 72px;
+
+}
+
