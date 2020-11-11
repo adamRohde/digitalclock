@@ -5,30 +5,37 @@
       <link rel="stylesheet" href="/assets/style.css">
   </head>
   <body>
-        <div class="dayoftheweek">
+        
+    <div class="dayoftheweek">
             <div>
                 <h1 id="dayoftheweek"> </h1>
             </div>
         </div>
 
-        <div class="clock">
-            <div>
-                <h1 id="hour">HH</h1>
-            </div>
-            <div>
-                <h1>:</h1>
-            </div>
-            <div>
-                <h1 id="minute">MM</h1>
-            </div>
-            <div>
-                <h1>:</h1>
-            </div>
-            <div>
-                <h1 id="second">SS</h1>
-            </div>
-        </div>
+        <div class = "wrapper-clock">          
+            <div></div>
 
+            <div class="clock">
+                <div>
+                    <h1 id="hour">HH</h1>
+                </div>
+                <div>
+                    <h1>:</h1>
+                </div>
+                <div>
+                    <h1 id="minute">MM</h1>
+                </div>
+                <div>
+                    <h1>:</h1>
+                </div>
+                <div>
+                    <h1 id="second">SS</h1>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+    
         <div class="monthdayyear">
             <div>
                 <h1 id="month"></h1>
@@ -42,6 +49,19 @@
                 <h1 id="year"></h1>
             </div>
         </div>
+
+        <div>
+            <input type="radio" name="rad" id="12-hour-clock" checked="checked" data-waschecked="true" >
+            <label for="12-hour-clock">12-hour-clock</label>
+
+            <input type="radio" name="rad" id="24-hour-clock">
+            <label for="24-hour-clock">24-hour-clock</label>
+
+        </div>
+
+
+
+
 
 
         <script type="text/javascript" src="http://localhost/assets/index.js"></script>
