@@ -1,0 +1,49 @@
+html {
+  background-color: #1E1E1E;
+}
+
+.navbar {
+  background-color: #3d424d;
+  height: auto;
+}
+
+.navbar .btn {
+  background-color: #3d424d;
+}
+
+.navbar .burger {
+  width: 2em;
+  height: .2em;
+  background-color: #1E1E1E;
+  margin: .25em 0;
+  border-radius: .2em;
+}
+
+.navbar div {
+  background-color: #3d424d;
+}
+
+.navbar input {
+  color: #e0d4e4;
+}
+
+.navbar label {
+  color: #e0d4e4;
+}
+
+div {
+  background-color: #1E1E1E;
+}
+
+h1 {
+  color: #e0d4e4;
+}
+
+input {
+  color: #e0d4e4;
+}
+
+label {
+  color: #e0d4e4;
+}
+/*# sourceMappingURL=style.css.map */

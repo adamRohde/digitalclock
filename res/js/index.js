@@ -1,6 +1,15 @@
 
+//import variables from '../styles/variables.scss';
+// webpack.config.js
+
+
+
+
 //Todo 
 window.setInterval(function(){
+
+
+
     let tDate = new Date()
 
 //------------------------------------------------------------------Day of week----------------------------------------------------
@@ -11,7 +20,9 @@ window.setInterval(function(){
 //------------------------------------------------------------------Time----------------------------------------------------
     //Displays the current time in 12 hour time if radio is checked
     if (document.getElementById('12-hour-clock').checked) {
-        console.log("12 hour checked");
+        //console.log("12 hour checked");
+
+        //Handles 1pm to 11:59pm or 13:00 to 23:59
         if (tDate.getHours() > 12){
             var temphours = tDate.getHours() - 12;
             if (temphours < 10){
@@ -19,16 +30,23 @@ window.setInterval(function(){
             }else{
                 document.getElementById("hour").innerHTML = tDate.getHours() - 12;
             }
-        }else{       
+        //Handles 12am to 11:59am or 00:00 to 11:59   
+        }else if (tDate.getHours() < 12){       
             if (temphours < 10){
-                document.getElementById("hour").innerHTML = "0" + (tDate.getHours() - 12);
+                //Handles 00:00 and converts to 01:00
+                if (temphours = 0){
+                    document.getElementById("hour").innerHTML = "01";
+                }else {
+                    document.getElementById("hour").innerHTML = "0" + (tDate.getHours());
+                }
             }else{
                 document.getElementById("hour").innerHTML = tDate.getHours() - 12;
             }
         } 
     //Displays the current time in 24 hour time if radio is checked  
     }else if (document.getElementById('24-hour-clock').checked){
-        console.log("24 hour checked");
+       // console.log("24 hour checked");
+       
         if (temphours < 10){
             document.getElementById("hour").innerHTML = "0" + tDate.getHours();
         }else{

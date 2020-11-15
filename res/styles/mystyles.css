@@ -6,7 +6,7 @@
 }
 
 .wrapper-clock > div{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     text-align: center;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .dayoftheweek > div{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
@@ -42,7 +42,7 @@
 }
 
 .clock > div{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     text-align: center;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .monthdayyear > div{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     text-align: center;
 }
 
