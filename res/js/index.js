@@ -1,14 +1,7 @@
 
-//import variables from '../styles/variables.scss';
-// webpack.config.js
-
-
-
 
 //Todo 
 window.setInterval(function(){
-
-
 
     let tDate = new Date()
 
@@ -31,10 +24,10 @@ window.setInterval(function(){
                 document.getElementById("hour").innerHTML = tDate.getHours() - 12;
             }
         //Handles 12am to 11:59am or 00:00 to 11:59   
-        }else if (tDate.getHours() < 12){       
-            if (temphours < 10){
+        }else if (tDate.getHours() < 12){    
+            if (tDate.getHours() < 10){
                 //Handles 00:00 and converts to 01:00
-                if (temphours = 0){
+                if (tDate.getHours() == 0){
                     document.getElementById("hour").innerHTML = "01";
                 }else {
                     document.getElementById("hour").innerHTML = "0" + (tDate.getHours());
@@ -43,12 +36,20 @@ window.setInterval(function(){
                 document.getElementById("hour").innerHTML = tDate.getHours() - 12;
             }
         } 
+
+       
     //Displays the current time in 24 hour time if radio is checked  
     }else if (document.getElementById('24-hour-clock').checked){
        // console.log("24 hour checked");
        
-        if (temphours < 10){
-            document.getElementById("hour").innerHTML = "0" + tDate.getHours();
+        if (tDate.getHours() < 10){
+
+            if (tDate.getHours() == 0){
+                document.getElementById("hour").innerHTML = "00";
+            }else{
+                document.getElementById("hour").innerHTML = "0" + tDate.getHours();
+            }
+
         }else{
             document.getElementById("hour").innerHTML = tDate.getHours();
         }
