@@ -1,2 +1,2 @@
 # digitalclock
-digital clock using html, css and js.
+digital clock using html, css and js.  Tells both 12 and 24 hour time.
